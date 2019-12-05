@@ -50,6 +50,23 @@ export interface UserInfo {
   uniqueId: string;
 }
 
+export class AuthenticationSettings {
+  /**
+   * Sets flag to use or skip authentication broker.
+   * By default, the flag value is false and ADAL will not talk to broker.
+   *
+   * @param useBroker Flag to use or skip authentication broker
+   *
+   * @returns {Promise} Promise either fulfilled or rejected with error
+   */
+  @CordovaInstance({
+    otherPromise: true
+  })
+  static setUseBroker(useBroker: boolean): Promise<void> {
+      return;
+  }
+}
+
 /**
  * @name MS ADAL
  * @description
